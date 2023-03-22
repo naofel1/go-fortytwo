@@ -30,7 +30,7 @@ import "github.com/naofel1/go-fortytwo"
 
 client := fortytwo.NewClient(ctx, "client_id", "client_secret", "redirect_url", []string{"public"})
 
-achivements, err := client.List(context.Background(), &fortytwo.AchievementQueryRequest{
+achievements, err := client.List(context.Background(), &fortytwo.AchievementQueryRequest{
       Pagination: &fortytwo.Pagination{
          Cursor:   1,
          PageSize: 10,

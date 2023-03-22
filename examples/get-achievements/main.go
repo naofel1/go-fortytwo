@@ -24,7 +24,7 @@ func main() {
 
 	cl := config.Init42API(ctx, cfg)
 
-	achivements, _, err := cl.Achievement.List(ctx, &fortytwo.AchievementQueryRequest{
+	achievements, _, err := cl.Achievement.List(ctx, &fortytwo.AchievementQueryRequest{
 		Pagination: &fortytwo.Pagination{
 			Cursor:   1,
 			PageSize: 10,
@@ -34,7 +34,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	b, err := json.Marshal(achivements)
+	b, err := json.Marshal(achievements)
 	if err != nil {
 		log.Fatal(err)
 	}
