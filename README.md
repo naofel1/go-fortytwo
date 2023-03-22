@@ -47,7 +47,7 @@ reference and the [examples](/examples) directory for more example code.
 
 ## Status
 
-The FortyTwo API golang package is in beta. If you want to contribute you are
+The FortyTwo API golang package is in alpha. If you want to contribute you are
 welcome to do so. Please read the [contributing guidelines](CONTRIBUTING.md) before you start.
 
 ## License
