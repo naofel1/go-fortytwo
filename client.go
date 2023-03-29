@@ -71,12 +71,14 @@ func NewClient(ctx context.Context, ClientID, ClientSecret, RedirectURL string, 
 	}
 
 	c := &Client{
-		redirectURL: RedirectURL,
-		httpClient:  cfg.Client(ctx),
-		baseURL:     uAPI,
-		apiVersion:  apiVersion,
-		maxRetries:  maxRetries,
-		Scope:       Scope,
+		ClientID:     ClientID,
+		ClientSecret: ClientSecret,
+		redirectURL:  RedirectURL,
+		httpClient:   cfg.Client(ctx),
+		baseURL:      uAPI,
+		apiVersion:   apiVersion,
+		maxRetries:   maxRetries,
+		Scope:        Scope,
 	}
 
 	c.Achievement = &AchievementClient{apiClient: c}
