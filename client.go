@@ -46,6 +46,7 @@ type Client struct {
 
 	Achievement AchievementService
 	CursusUser  CursusUserService
+	Project     ProjectService
 	Cursus      CursusService
 	User        UserService
 
@@ -83,6 +84,7 @@ func NewClient(ctx context.Context, ClientID, ClientSecret, RedirectURL string, 
 
 	c.Achievement = &AchievementClient{apiClient: c}
 	c.CursusUser = &CursusUserClient{apiClient: c}
+	c.Project = &ProjectClient{apiClient: c}
 	c.Cursus = &CursusClient{apiClient: c}
 	c.User = &UserClient{apiClient: c}
 
