@@ -12,6 +12,11 @@ Card](https://goreportcard.com/badge/github.com/naofel1/go-fortytwo)](https://go
 API](https://api.intra.42.fr/apidoc), written in
 [Go](https://golang.org/).
 
+## Note
+The APIDoc documentation provided on the API's website may not be accurate and up-to-date. To ensure the accuracy and reliability of the API documentation, we've converted the APIDoc document to OpenAPI (Swagger) format. You can find the converted OpenAPI (Swagger) documentation in this repository.
+
+[🤖 OpenAPI 3.0](docs/openapi3.json)
+
 ## Installation
 
 ```sh
