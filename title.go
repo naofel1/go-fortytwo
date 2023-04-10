@@ -8,7 +8,7 @@ import (
 )
 
 type TitleService interface {
-	List(ctx context.Context, req *CursusQueryRequest) (*Titles, *PaginationResponse, error)
+	List(ctx context.Context, req *TitleQueryRequest) (*Titles, *PaginationResponse, error)
 
 	FindByID(ctx context.Context, id TitleID) (*Title, error)
 }
@@ -18,7 +18,7 @@ type TitleClient struct {
 }
 
 // Get https://api.intra.42.fr/apidoc/2.0/titles/show.html
-func (a *TitleClient) List(ctx context.Context, req *CursusQueryRequest) (*Titles, *PaginationResponse, error) {
+func (a *TitleClient) List(ctx context.Context, req *TitleQueryRequest) (*Titles, *PaginationResponse, error) {
 	res, err := a.apiClient.request(ctx, http.MethodGet, "titles", "", req.Pagination.ToQuery(), nil)
 	if err != nil {
 		return nil, nil, err

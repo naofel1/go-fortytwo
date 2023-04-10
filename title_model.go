@@ -16,3 +16,7 @@ type Title struct {
 	ID   TitleID `json:"id"`
 	Name string  `json:"name"`
 }
+
+type TitleQueryRequest struct {
+	Pagination *Pagination `json:"pagination,omitempty"`
+}
