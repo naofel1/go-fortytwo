@@ -48,6 +48,7 @@ type Client struct {
 	CursusUser  CursusUserService
 	Project     ProjectService
 	Cursus      CursusService
+	Title       TitleService
 	User        UserService
 
 	maxRetries int
@@ -86,6 +87,7 @@ func NewClient(ctx context.Context, ClientID, ClientSecret, RedirectURL string, 
 	c.CursusUser = &CursusUserClient{apiClient: c}
 	c.Project = &ProjectClient{apiClient: c}
 	c.Cursus = &CursusClient{apiClient: c}
+	c.Title = &TitleClient{apiClient: c}
 	c.User = &UserClient{apiClient: c}
 
 	for _, opt := range opts {
